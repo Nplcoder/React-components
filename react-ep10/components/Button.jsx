@@ -1,7 +1,9 @@
-const Button = ({ imageUrl }) => {
+const Button = ({ imageUrl, buttonName, clickHandler }) => {
+  console.log("Button props:", imageUrl, buttonName);
+
   return (
-    <button title="hello">
-      <img src={imageUrl} alt="button" />
+    <button onClick={clickHandler} title={buttonName}>
+      <img src={imageUrl} alt={buttonName} />
     </button>
   )
 }

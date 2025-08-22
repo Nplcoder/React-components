@@ -16147,47 +16147,100 @@ var _rightArrowPng = require("url:../assets/images/right-arrow.png");
 var _rightArrowPngDefault = parcelHelpers.interopDefault(_rightArrowPng);
 var _appleBasket = require("./AppleBasket");
 var _appleBasketDefault = parcelHelpers.interopDefault(_appleBasket);
+// import { createRoot } from 'react-dom/client'
+// const root = createRoot(document.querySelector('#root'))
 var _appleCounterCss = require("./AppleCounter.css");
+const totalAppleCount = 10;
+let rightAppleCount = 0;
+let leftAppleCount = totalAppleCount - rightAppleCount;
 const AppleCounter = ()=>{
     console.log("LeftArrow import:", (0, _leftArrowPngDefault.default));
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+    const leftClickHandler = ()=>{
+        // console.log('left Clicked')
+        if (rightAppleCount > 0) {
+            rightAppleCount--;
+            leftAppleCount++;
+        // root.render(<AppleCounter />)
+        }
+    };
+    const RightClickHandler = ()=>{
+        // console.log('Right Clicked')
+        if (leftAppleCount > 0) {
+            rightAppleCount++;
+            leftAppleCount--;
+        // root.render(<AppleCounter />)
+        }
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appleBasketDefault.default), {
-                appleCount: 10,
-                basketName: "Basket 1"
-            }, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("section", {
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appleBasketDefault.default), {
+                        appleCount: leftAppleCount,
+                        basketName: "Basket 1"
+                    }, void 0, false, {
+                        fileName: "components/AppleCounter.jsx",
+                        lineNumber: 43,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        clickHandler: leftClickHandler,
+                        imageUrl: (0, _leftArrowPngDefault.default),
+                        buttonName: "Left"
+                    }, void 0, false, {
+                        fileName: "components/AppleCounter.jsx",
+                        lineNumber: 44,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
+                        clickHandler: RightClickHandler,
+                        imageUrl: (0, _rightArrowPngDefault.default),
+                        buttonName: "Right"
+                    }, void 0, false, {
+                        fileName: "components/AppleCounter.jsx",
+                        lineNumber: 46,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appleBasketDefault.default), {
+                        appleCount: rightAppleCount,
+                        basketName: "Basket 2"
+                    }, void 0, false, {
+                        fileName: "components/AppleCounter.jsx",
+                        lineNumber: 48,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
                 fileName: "components/AppleCounter.jsx",
-                lineNumber: 14,
-                columnNumber: 9
+                lineNumber: 42,
+                columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                imageUrl: (0, _leftArrowPngDefault.default)
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
+                style: {
+                    textAlign: "center",
+                    marginTop: '32px'
+                },
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                    onClick: ()=>{
+                        root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppleCounter, {}, void 0, false, {
+                            fileName: "components/AppleCounter.jsx",
+                            lineNumber: 53,
+                            columnNumber: 23
+                        }, void 0));
+                    },
+                    children: "Re-Render"
+                }, void 0, false, {
+                    fileName: "components/AppleCounter.jsx",
+                    lineNumber: 52,
+                    columnNumber: 9
+                }, undefined)
             }, void 0, false, {
                 fileName: "components/AppleCounter.jsx",
-                lineNumber: 15,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                imageUrl: (0, _rightArrowPngDefault.default)
-            }, void 0, false, {
-                fileName: "components/AppleCounter.jsx",
-                lineNumber: 17,
-                columnNumber: 9
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appleBasketDefault.default), {
-                appleCount: 0,
-                basketName: "Basket 2"
-            }, void 0, false, {
-                fileName: "components/AppleCounter.jsx",
-                lineNumber: 18,
-                columnNumber: 9
+                lineNumber: 51,
+                columnNumber: 7
             }, undefined)
         ]
-    }, void 0, true, {
-        fileName: "components/AppleCounter.jsx",
-        lineNumber: 12,
-        columnNumber: 5
-    }, undefined);
+    }, void 0, true);
 };
 _c = AppleCounter;
 exports.default = AppleCounter;
@@ -16210,20 +16263,22 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const Button = ({ imageUrl })=>{
+const Button = ({ imageUrl, buttonName, clickHandler })=>{
+    console.log("Button props:", imageUrl, buttonName);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-        title: "hello",
+        onClick: clickHandler,
+        title: buttonName,
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
             src: imageUrl,
-            alt: "button"
+            alt: buttonName
         }, void 0, false, {
             fileName: "components/Button.jsx",
-            lineNumber: 4,
+            lineNumber: 6,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "components/Button.jsx",
-        lineNumber: 3,
+        lineNumber: 5,
         columnNumber: 5
     }, undefined);
 };
