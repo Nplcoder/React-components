@@ -1,6 +1,6 @@
-3611
+3609
 99D:\02. CODING\React-components\react-ep10\node_modules\lmdb\dependencies\v8\v8-fast-api-calls-v16.h133998037696575239 0
-48D:\02. CODING\React-components\react-ep10\App.js133999807105695154 0
+48D:\02. CODING\React-components\react-ep10\App.js134003424826138685 0
 81D:\02. CODING\React-components\react-ep10\node_modules\node-addon-api\except.gypi133998037689917658 0
 82D:\02. CODING\React-components\react-ep10\node_modules\@parcel\transformer-raw\lib133998037702670116 1
 75D:\02. CODING\React-components\react-ep10\node_modules\globals\globals.json133998037689683912 0
@@ -9,7 +9,7 @@
 72D:\02. CODING\React-components\react-ep10\node_modules\term-size\license133998037689628207 0
 82D:\02. CODING\React-components\react-ep10\node_modules\commander\typings\esm.d.mts133998037691909423 0
 48D:\02. CODING\React-components\react-ep10\assets133998047485309293 1
-46D:\02. CODING\React-components\react-ep10\dist134003359594731438 1
+46D:\02. CODING\React-components\react-ep10\dist134003434375303880 1
 61D:\02. CODING\React-components\react-ep10\node_modules\braces133998037690779997 1
 75D:\02. CODING\React-components\react-ep10\node_modules\picocolors\README.md133998037689949761 0
 91D:\02. CODING\React-components\react-ep10\node_modules\@parcel\error-overlay\src\components133998037699530297 1
@@ -44,7 +44,7 @@
 114D:\02. CODING\React-components\react-ep10\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mdb_copy.c133998037693227786 0
 81D:\02. CODING\React-components\react-ep10\node_modules\@parcel\core\lib\Parcel.js133998037740691990 0
 71D:\02. CODING\React-components\react-ep10\node_modules\semver\README.md133998037693523152 0
-50D:\02. CODING\React-components\react-ep10\index.js133998043883575365 0
+50D:\02. CODING\React-components\react-ep10\index.js134003424265667888 0
 106D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\features\requestanimationframe.js133998037710079405 0
 95D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\features\websockets.js133998037712829181 0
 86D:\02. CODING\React-components\react-ep10\node_modules\@parcel\watcher\src\Debounce.hh133998037692576237 0
@@ -188,7 +188,7 @@
 76D:\02. CODING\React-components\react-ep10\node_modules\@swc\types\index.d.ts133998037690630844 0
 74D:\02. CODING\React-components\react-ep10\node_modules\regenerator-runtime133998037689981357 1
 88D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\features\wav.js133998037712618621 0
-71D:\02. CODING\React-components\react-ep10\dist\right-arrow.fdba7e32.png134003359584500527 0
+71D:\02. CODING\React-components\react-ep10\dist\right-arrow.fdba7e32.png134003434374832692 0
 63D:\02. CODING\React-components\react-ep10\node_modules\has-flag133998037689895169 1
 65D:\02. CODING\React-components\react-ep10\node_modules\fill-range133998037689650693 1
 86D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\regions\DO.js133998037701960364 0
@@ -536,7 +536,7 @@
 99D:\02. CODING\React-components\react-ep10\node_modules\@swc\helpers\_\_define_property\package.json133998037701362292 0
 83D:\02. CODING\React-components\react-ep10\node_modules\@parcel\profiler\build-ts.js133998037697873893 0
 91D:\02. CODING\React-components\react-ep10\node_modules\@swc\helpers\_\_extends\package.json133998037701455427 0
-69D:\02. CODING\React-components\react-ep10\dist\react-ep10.e02fbd41.js134003359594602883 0
+69D:\02. CODING\React-components\react-ep10\dist\react-ep10.e02fbd41.js134003434375229391 0
 102D:\02. CODING\React-components\react-ep10\node_modules\lmdb\dependencies\lmdb\libraries\liblmdb\lmdb.h133998037696147927 0
 80D:\02. CODING\React-components\react-ep10\node_modules\semver\functions\minor.js133998037692657328 0
 82D:\02. CODING\React-components\react-ep10\node_modules\type-fest\source\basic.d.ts133998037690516643 0
@@ -1212,7 +1212,7 @@
 96D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\features\css-subgrid.js133998037700737284 0
 117D:\02. CODING\React-components\react-ep10\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages133998037690564627 1
 135D:\02. CODING\React-components\react-ep10\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\node-gyp-build.js133998037690069742 0
-70D:\02. CODING\React-components\react-ep10\dist\left-arrow.b679131b.png134003359584033957 0
+70D:\02. CODING\React-components\react-ep10\dist\left-arrow.b679131b.png134003434374809390 0
 130D:\02. CODING\React-components\react-ep10\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\package.json133998037690465947 0
 92D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\features\portals.js133998037709660745 0
 78D:\02. CODING\React-components\react-ep10\node_modules\@parcel\packager-js\lib133998037719781964 1
@@ -1846,7 +1846,6 @@
 86D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\regions\MK.js133998037708082287 0
 87D:\02. CODING\React-components\react-ep10\node_modules\@swc\helpers\cjs\_call_super.cjs133998037691704277 0
 86D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\regions\MM.js133998037708117905 0
-71D:\02. CODING\React-components\react-ep10\dist\right-arrow.301bd7d4.png134003325577584812 0
 108D:\02. CODING\React-components\react-ep10\node_modules\@swc\helpers\_\_class_private_field_init\package.json133998037700660204 0
 105D:\02. CODING\React-components\react-ep10\node_modules\@parcel\source-map\parcel_sourcemap_wasm\dist-node133998037694879366 1
 86D:\02. CODING\React-components\react-ep10\node_modules\caniuse-lite\data\regions\MN.js133998037708140541 0
@@ -3169,7 +3168,7 @@
 86D:\02. CODING\React-components\react-ep10\node_modules\@parcel\plugin\src\PluginAPI.js133998037698367528 0
 91D:\02. CODING\React-components\react-ep10\node_modules\@parcel\transformer-babel\lib\jsx.js133998037707804945 0
 105D:\02. CODING\React-components\react-ep10\node_modules\@parcel\transformer-babel\lib\remapAstLocations.js133998037707874753 0
-74D:\02. CODING\React-components\react-ep10\dist\react-ep10.aa436662.css.map134003359584064194 0
+74D:\02. CODING\React-components\react-ep10\dist\react-ep10.aa436662.css.map134003434374864650 0
 108D:\02. CODING\React-components\react-ep10\node_modules\@parcel\core\test\fixtures\config-malformed\.parcelrc133998037736294115 0
 80D:\02. CODING\React-components\react-ep10\node_modules\@parcel\markdown-ansi\src133998037706723173 1
 93D:\02. CODING\React-components\react-ep10\node_modules\@parcel\transformer-babel\lib\types.js133998037707924619 0
@@ -3300,7 +3299,7 @@
 79D:\02. CODING\React-components\react-ep10\node_modules\@parcel\packager-raw\src133998037713428314 1
 72D:\02. CODING\React-components\react-ep10\node_modules\@lezer\lr\LICENSE133998037689058541 0
 94D:\02. CODING\React-components\react-ep10\node_modules\@parcel\packager-raw\src\RawPackager.js133998037713428314 0
-73D:\02. CODING\React-components\react-ep10\dist\react-ep10.e02fbd41.js.map134003359594717055 0
+73D:\02. CODING\React-components\react-ep10\dist\react-ep10.e02fbd41.js.map134003434375293598 0
 81D:\02. CODING\React-components\react-ep10\node_modules\@parcel\graph\lib\index.js133998037704110724 0
 78D:\02. CODING\React-components\react-ep10\node_modules\@parcel\packager-js\src133998037719801941 1
 93D:\02. CODING\React-components\react-ep10\node_modules\@parcel\packager-js\src\DevPackager.js133998037719614967 0
@@ -3603,10 +3602,9 @@
 70D:\02. CODING\React-components\react-ep10\node_modules\.bin\parcel.ps1133998037747173138 0
 70D:\02. CODING\React-components\react-ep10\node_modules\.bin\semver.cmd133998037747432487 0
 70D:\02. CODING\React-components\react-ep10\node_modules\.bin\semver.ps1133998037747432487 0
-57D:\02. CODING\React-components\react-ep10\dist\index.html134003359583998973 0
-70D:\02. CODING\React-components\react-ep10\dist\left-arrow.cc12c447.png134003325576871847 0
-70D:\02. CODING\React-components\react-ep10\dist\react-ep10.aa436662.css134003359584023937 0
+57D:\02. CODING\React-components\react-ep10\dist\index.html134003434374735173 0
+70D:\02. CODING\React-components\react-ep10\dist\react-ep10.aa436662.css134003434374785043 0
 68D:\02. CODING\React-components\react-ep10\components\AppleBasket.jsx133999732540937145 0
 69D:\02. CODING\React-components\react-ep10\components\AppleCounter.css134000657633924449 0
-69D:\02. CODING\React-components\react-ep10\components\AppleCounter.jsx134003359591898157 0
+69D:\02. CODING\React-components\react-ep10\components\AppleCounter.jsx134003433686155189 0
 55D:\02. CODING\React-components\react-ep10\assets\images134000663070811293 1

@@ -680,7 +680,9 @@ var _client = require("react-dom/client");
 var _app = require("./App");
 var _appDefault = parcelHelpers.interopDefault(_app);
 const root = (0, _client.createRoot)(document.querySelector('#root'));
-root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {
+    root: root
+}, void 0, false, {
     fileName: "index.js",
     lineNumber: 6,
     columnNumber: 13
@@ -16105,9 +16107,11 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _appleCounter = require("./components/AppleCounter");
 var _appleCounterDefault = parcelHelpers.interopDefault(_appleCounter);
-const App = ()=>{
+const App = ({ root })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appleCounterDefault.default), {}, void 0, false, {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appleCounterDefault.default), {
+            root: root
+        }, void 0, false, {
             fileName: "App.js",
             lineNumber: 10,
             columnNumber: 7
@@ -16153,22 +16157,32 @@ var _appleCounterCss = require("./AppleCounter.css");
 const totalAppleCount = 10;
 let rightAppleCount = 0;
 let leftAppleCount = totalAppleCount - rightAppleCount;
-const AppleCounter = ()=>{
-    console.log("LeftArrow import:", (0, _leftArrowPngDefault.default));
+const AppleCounter = ({ root })=>{
     const leftClickHandler = ()=>{
         // console.log('left Clicked')
         if (rightAppleCount > 0) {
             rightAppleCount--;
             leftAppleCount++;
-        // root.render(<AppleCounter />)
+            root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppleCounter, {
+                root: root
+            }, void 0, false, {
+                fileName: "components/AppleCounter.jsx",
+                lineNumber: 24,
+                columnNumber: 19
+            }, undefined));
         }
     };
-    const RightClickHandler = ()=>{
-        // console.log('Right Clicked')
+    const rightClickHandler = ()=>{
         if (leftAppleCount > 0) {
             rightAppleCount++;
             leftAppleCount--;
-        // root.render(<AppleCounter />)
+            root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppleCounter, {
+                root: root
+            }, void 0, false, {
+                fileName: "components/AppleCounter.jsx",
+                lineNumber: 33,
+                columnNumber: 19
+            }, undefined));
         }
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -16180,7 +16194,7 @@ const AppleCounter = ()=>{
                         basketName: "Basket 1"
                     }, void 0, false, {
                         fileName: "components/AppleCounter.jsx",
-                        lineNumber: 43,
+                        lineNumber: 41,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
@@ -16189,16 +16203,16 @@ const AppleCounter = ()=>{
                         buttonName: "Left"
                     }, void 0, false, {
                         fileName: "components/AppleCounter.jsx",
-                        lineNumber: 44,
+                        lineNumber: 42,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _buttonDefault.default), {
-                        clickHandler: RightClickHandler,
+                        clickHandler: rightClickHandler,
                         imageUrl: (0, _rightArrowPngDefault.default),
                         buttonName: "Right"
                     }, void 0, false, {
                         fileName: "components/AppleCounter.jsx",
-                        lineNumber: 46,
+                        lineNumber: 44,
                         columnNumber: 7
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appleBasketDefault.default), {
@@ -16206,13 +16220,13 @@ const AppleCounter = ()=>{
                         basketName: "Basket 2"
                     }, void 0, false, {
                         fileName: "components/AppleCounter.jsx",
-                        lineNumber: 48,
+                        lineNumber: 46,
                         columnNumber: 7
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "components/AppleCounter.jsx",
-                lineNumber: 42,
+                lineNumber: 40,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -16221,22 +16235,16 @@ const AppleCounter = ()=>{
                     marginTop: '32px'
                 },
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                    onClick: ()=>{
-                        root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppleCounter, {}, void 0, false, {
-                            fileName: "components/AppleCounter.jsx",
-                            lineNumber: 53,
-                            columnNumber: 23
-                        }, void 0));
-                    },
+                    onClick: ()=>{},
                     children: "Re-Render"
                 }, void 0, false, {
                     fileName: "components/AppleCounter.jsx",
-                    lineNumber: 52,
+                    lineNumber: 50,
                     columnNumber: 9
                 }, undefined)
             }, void 0, false, {
                 fileName: "components/AppleCounter.jsx",
-                lineNumber: 51,
+                lineNumber: 49,
                 columnNumber: 7
             }, undefined)
         ]
@@ -16252,7 +16260,7 @@ $RefreshReg$(_c, "AppleCounter");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","./Button":"1Yx3U","./AppleBasket":"7eQYI","./AppleCounter.css":"alUxU","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","url:../assets/images/left-arrow.png":"4WGvv","url:../assets/images/right-arrow.png":"2P2PQ"}],"1Yx3U":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","./Button":"1Yx3U","url:../assets/images/left-arrow.png":"4WGvv","url:../assets/images/right-arrow.png":"2P2PQ","./AppleBasket":"7eQYI","./AppleCounter.css":"alUxU","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"1Yx3U":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$2a29 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$2a29.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -18600,7 +18608,13 @@ function $da9882e673ac146b$var$ErrorOverlay() {
     return null;
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"7eQYI":[function(require,module,exports,__globalThis) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT"}],"4WGvv":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("left-arrow.b679131b.png") + "?" + Date.now();
+
+},{}],"2P2PQ":[function(require,module,exports,__globalThis) {
+module.exports = module.bundle.resolve("right-arrow.fdba7e32.png") + "?" + Date.now();
+
+},{}],"7eQYI":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$bd1b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$bd1b.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
@@ -18657,12 +18671,6 @@ $RefreshReg$(_c, "AppleBasket");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"alUxU":[function() {},{}],"4WGvv":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("left-arrow.b679131b.png") + "?" + Date.now();
-
-},{}],"2P2PQ":[function(require,module,exports,__globalThis) {
-module.exports = module.bundle.resolve("right-arrow.fdba7e32.png") + "?" + Date.now();
-
-},{}]},["kxwl6","jOXmm"], "jOXmm", "parcelRequirebc39", {}, "./", "/", "http://localhost:1234")
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"alUxU":[function() {},{}]},["kxwl6","jOXmm"], "jOXmm", "parcelRequirebc39", {}, "./", "/", "http://localhost:1234")
 
 //# sourceMappingURL=react-ep10.e02fbd41.js.map
