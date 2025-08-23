@@ -16134,7 +16134,7 @@ $RefreshReg$(_c, "App");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./components/AppleCounter":"9yZvW","./components/Counter":"8vpXk","./components/ToggleText":"58X58","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi","./components/MultipleEvents":"iQcGW"}],"9yZvW":[function(require,module,exports,__globalThis) {
+},{"react/jsx-dev-runtime":"dVPUn","react":"jMk1U","./components/AppleCounter":"9yZvW","./components/Counter":"8vpXk","./components/ToggleText":"58X58","./components/MultipleEvents":"iQcGW","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}],"9yZvW":[function(require,module,exports,__globalThis) {
 var $parcel$ReactRefreshHelpers$abaa = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 $parcel$ReactRefreshHelpers$abaa.init();
 var prevRefreshReg = globalThis.$RefreshReg$;
