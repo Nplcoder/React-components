@@ -1,5 +1,8 @@
 
 import './App.css'
+import ConditionalComponent from './components/ConditionalComponent'
+import ConditionalOne from './components/ConditionalOne'
+import ConditionalTwo from './components/ConditionalTwo'
 import Counter from './components/Counter'
 import Fruits from './components/Fruits'
 import ShowGreeting from './components/ShowGreeting'
@@ -15,7 +18,10 @@ function App() {
       {/* <Counter /> */}
       {/* <ShowGreeting /> */}
       {/* <Fruits/> */}
-      <Wrestlers/>
+      {/* <Wrestlers/> */}
+      {/* <ConditionalComponent /> */}
+      {/* <ConditionalOne /> */}
+      <ConditionalTwo />
     </>
   )
 }
