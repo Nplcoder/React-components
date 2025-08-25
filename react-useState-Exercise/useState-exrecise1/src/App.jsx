@@ -1,7 +1,9 @@
 
 import './App.css'
 import Counter from './components/Counter'
+import Fruits from './components/Fruits'
 import ShowGreeting from './components/ShowGreeting'
+import Wrestlers from './components/Wrestlers'
 
 function App() {
   
@@ -11,7 +13,9 @@ function App() {
   return (
     <>
       {/* <Counter /> */}
-      <ShowGreeting />
+      {/* <ShowGreeting /> */}
+      {/* <Fruits/> */}
+      <Wrestlers/>
     </>
   )
 }
