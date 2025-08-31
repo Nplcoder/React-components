@@ -1,13 +1,19 @@
 import React from 'react'
 import ItemTodo from './ItemTodo'
 
-function TodoList({todos, setTodos}) {
+function TodoList({todos, setTodos, sortedTodos}) {
     
+
   return (
     <div className='bg-white rounded-2xl shadow-sm w-[500px] p-5 mt-12 mx-auto font-bold'>
-      {todos.map((item) => (
-        <ItemTodo key={item} item={item} todos={todos} setTodos={setTodos} />
+      {sortedTodos.map((item) => (
+        <ItemTodo 
+        key={item.name} 
+        item={item} 
+        todos={todos} 
+        setTodos={setTodos} />
      ))}
+     
     </div>
   )
 }

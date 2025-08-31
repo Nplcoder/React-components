@@ -6,10 +6,16 @@ function ItemTodo({item, todos, setTodos}) {
     setTodos(todos.filter((todo) => todo !== item))
   }
 
+  function handelClick(name){
+    console.log("Todo click", name)
+    setTodos(todos.map((todo) => todo.name === name ? {...todo, done:!todo.done} : todo))
+    
+  }
+
   return (
     <div className='w-[500px] text-[#353935] text-xl mx-auto'>
       <div className='flex items-center justify-between font-bold p-5'>
-        <span>{item}</span>
+        <span onClick={() => handelClick(item.name)} className={item.done ? 'line-through text-gray-400 cursor-pointer' :"cursor-pointer"}>{item.name}</span>
       <span>
         <button onClick={() => handleDelete(item)} className="bg-yellow-300 text-white px-3 py-1 rounded shadow hover:bg-yellow-400 font-normal mr-5 -mt-2">x</button>
         </span>
