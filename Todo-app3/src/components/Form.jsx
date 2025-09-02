@@ -1,19 +1,27 @@
 import React, { useState } from 'react'
 import TodoList from './TodoList'
+import Footer from './Footer'
 
 function Form() {
-    const [todo, setTodo] = useState('')
+    const [todo, setTodo] = useState({name:'', done:false})
     const [todos, setTodos] = useState([])
+
+    const sortedTodos = todos.slice().sort((a, b) => Number(a.done) - Number(b.done))
 
     function handleSubmit(e){
         e.preventDefault()
         setTodos([...todos, todo])
 
-        setTodo('')
-
-        
+        setTodo({name:'', done:false})
     }
 
+    const completedTodos = todos.filter((todo) => todo.done).length
+    console.log(completedTodos)
+
+    const totalTodos = todos.length
+    console.log(totalTodos)
+
+    
 
   return (
     <div>
@@ -26,8 +34,8 @@ function Form() {
         className='w-full border border-gray-200 focus:outline-none focus:border-transparent text-2xl' 
         type="text" 
         placeholder='Enter your task'
-        onChange={(e) => setTodo(e.target.value)}
-        value={todo}
+        onChange={(e) => setTodo({name:e.target.value, done:false})}
+        value={todo.name}
          />
         <button 
         className='inline-block border-0 rounded bg-yellow-300 px-5 py-3 cursor-pointer'
@@ -37,10 +45,13 @@ function Form() {
         
       </form>
 
-      {/* {console.log(todos)} */}
+      
       {/* {todos} */}
       
-      <TodoList todos={todos} />
+      <TodoList todos={todos} setTodos={setTodos} sortedTodos={sortedTodos}/>
+      <Footer completedTodos={completedTodos} totalTodos={totalTodos} />
+
+      {/* {console.log(todos)} */}
     </div>
   )
 }
