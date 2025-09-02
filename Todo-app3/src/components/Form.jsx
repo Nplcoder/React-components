@@ -5,15 +5,11 @@ import Footer from './Footer'
 function Form() {
     const [todo, setTodo] = useState({name:'', done:false})
     const [todos, setTodos] = useState([])
+    const [error, setError] = useState('')
 
     const sortedTodos = todos.slice().sort((a, b) => Number(a.done) - Number(b.done))
 
-    function handleSubmit(e){
-        e.preventDefault()
-        setTodos([...todos, todo])
-
-        setTodo({name:'', done:false})
-    }
+    
 
     const completedTodos = todos.filter((todo) => todo.done).length
     console.log(completedTodos)
@@ -21,6 +17,18 @@ function Form() {
     const totalTodos = todos.length
     console.log(totalTodos)
 
+    function handleSubmit(e){
+      e.preventDefault()
+      
+      const isDuplicate = todos.some((t) => t.name.trim().toLowerCase() === todo.name.trim().toLowerCase()) 
+      if (isDuplicate){
+        setError('Task already Exists')
+        return
+      }
+      setTodos([...todos, todo])
+      setTodo({name:'', done:false})
+      setError('')
+  }
     
 
   return (
@@ -42,6 +50,11 @@ function Form() {
         type='submit'
         >Add</button>
         </div>
+
+        {/* popup error */}
+        {error && (
+          <p className='text-red-500 mt-2 text-center font-semibold'>{error}</p>
+        )}
         
       </form>
 
