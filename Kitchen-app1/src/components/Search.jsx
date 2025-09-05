@@ -5,18 +5,29 @@ const API_Key= 'd1409811aa714eb4bad417094f9b9bd1'
 
 export default function Search({foodData, setFoodData}){
    const [query, setQuery] = useState('pizza')
+
+   async function fetchFood(q){
+    const res = await fetch(`${URL}?query=${q}&apiKey=${API_Key}`)
+    const data = await res.json()
+    // console.log(data.results)
+    setFoodData(data.results)
+}
+
    useEffect(() => {
-   async function fetchFood(){
-        const res = await fetch(`${URL}?query=${query}&apiKey=${API_Key}`)
-        const data = await res.json()
-        // console.log(data.results)
-        setFoodData(data.results)
-    }
-    fetchFood()
+    fetchFood(query)
    }, [])
 
+   function handleSubmit(e){
+    e.preventDefault();
+    fetchFood(query);
+   }
+   
+
     return(
-        <div className="flex items-center space-x-2 mt-1 w-[500px] m-auto">
+        <div>
+
+        <form onSubmit={handleSubmit} 
+        className="flex items-center space-x-2 mt-1 w-[500px] m-auto">
   <input
     type="text"
     value={query}
@@ -25,11 +36,13 @@ export default function Search({foodData, setFoodData}){
     className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
   />
   <button
-    type="button"
+    type="submit"
     className="px-4 py-2 border border-yellow-400 rounded-lg text-yellow-600 hover:bg-yellow-400 hover:text-white transition"
   >
     Search
   </button>
+
+</form>
 </div>
 
     )
