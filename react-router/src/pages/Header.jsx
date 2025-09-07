@@ -14,7 +14,8 @@ export default function Header() {
         {/* Menu */}
         <ul className="flex space-x-6 text-lg">
           <li>
-            <Link to="/" className="hover:text-gray-400 transition">Home</Link>
+            {/* NavLink - Have Auto Active Class */}
+            <NavLink to="/" className="hover:text-gray-400 transition">Home</NavLink>
           </li>
           <li>
             <Link to="about" className="hover:text-gray-400 transition">About</Link>
@@ -30,7 +31,7 @@ export default function Header() {
             <Link to="users" className="hover:text-gray-400 transition">Users</Link>
           </li>
           <li>
-            <Link to="list" className="hover:text-gray-400 transition">List</Link>
+            <Link to="/users/list" className="hover:text-gray-400 transition">List</Link>
           </li>
         </ul>
       </div>

@@ -32,8 +32,12 @@ function App() {
           {/* <Route path='/users/:id' element={<UserDetails/>}/> */}
 
           <Route path="/about" element={<About />} />
-          <Route path="/users" element={<Users />} />
-          <Route path="/list" element={<List />} />
+          
+          <Route path="/users/list?" element={<Users />} />
+          <Route path="/users/:id/:name?" element={<UserDetails />} />
+
+
+          {/* <Route path="/list" element={<List />} /> */}
         </Route>
 
         {/* Nested Route */}
