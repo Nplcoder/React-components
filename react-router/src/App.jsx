@@ -47,6 +47,7 @@ function App() {
           <Route path="detail" element={<Details />} />
         </Route>
 
+        {/* Page not found */}
         <Route path='/*' element={<PageNotFound/>} />
         {/* <Route path="/*" element={<Navigate to="/login" />} /> */}
       </Routes>
