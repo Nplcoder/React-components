@@ -1,7 +1,13 @@
-import { createContext } from "react"
+import { createContext, useState } from "react"
+const UserContext = createContext()
 
-const userContext =  createContext('value')
+function ProviderContext({children}){
+    
+    const [user, setUser] = useState('guest')
+    return (
+    <UserContext.Provider value={{user, setUser}} >
+        {children}
+    </UserContext.Provider>
+)}
 
-function ProviderContext(){
-    return 
-}
+export {ProviderContext, UserContext}
